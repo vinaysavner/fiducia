@@ -5,7 +5,7 @@ const pool = createPool({
   host: "localhost",
   user: "",
   password: "",
-  database: fiducia,
+  database: "",
 });
 
 module.exports = pool;
