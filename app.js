@@ -73,8 +73,8 @@ var upload = multer({
 
 app.use("/",frontendRouter)//home page
 app.use("/",adminRouter)// admin 
-app.listen(process.env.APP_PORT, () => {
-  console.log("Server is running at port 8000..", process.env.APP_PORT);
+app.listen(5000, () => {
+  console.log("Server is running at port 5000..", 5000);
 });
  1
  
