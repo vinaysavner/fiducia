@@ -42,7 +42,7 @@ module.exports = {
       }
       console.log("res=>>>>>", results);
       // var imgsrc = 'process.env.baseUrl' + req.file.baseUrl
-      res.render("pages/frontend/brands", { title: "Express", data: results, active_nav:"fbrands"});
+      res.render("pages/frontend/brands", { title: "Express", data: results,active_nav: "fbrands" });
     });
   },
 
