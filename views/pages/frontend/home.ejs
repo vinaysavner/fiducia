@@ -417,25 +417,25 @@ jQuery(document).ready(function() {
       <section class="section bg-default section-md">
         <div class="container">
           <h2 class="title-icon"><span class="icon icon-default mercury-icon-news"></span><span>Latest <span class="text-light">Articles</span></span></h2>
-          <% for(var i=0; i < data.length; i++ ) { %>
+          <!-- <% for(var i=0; i < data.length; i++ ) { %> -->
          
           <div class="box-image-small box-image-small-left">
-            <div class="item-image bg-image novi-nackground" style="background-image: url('/images/upload_article_images/<%= articles[i].image %>')"></div>
+            <div class="item-image bg-image novi-nackground" style="background-image: url('/images/upload_article_images/<%= articles[0].image %>')"></div>
             <div class="item-body wow fadeInRight">
               <p>July 12, 2019</p>
-              <h4><a href="#"><%- articles[i].title%></a></h4>
-              <p class="big"><%- articles[i].description%></p>
+              <h4><a href="#"><%- articles[0].title%></a></h4>
+              <p class="big"><%- articles[0].description%></p>
             </div>
           </div>
-          <!-- <div class="box-image-small box-image-small-right">
+          <div class="box-image-small box-image-small-right">
             <div class="item-image bg-image novi-nackground" style="background-image: url('/images/upload_article_images/<%= articles[1].image %>')"></div>
             <div class="item-body wow fadeInLeft">
               <p>July 12, 2019</p>
               <h4><a href="#"><%- articles[1].title%></a></h4>
               <p class="big"><%- articles[1].description%></p>
             </div>
-          </div> -->
-          <% } %>
+          </div>
+          <!-- <% } %> -->
 
         </div>
       </section>
