@@ -65,6 +65,10 @@ module.exports = {
     // console.log( 'dash=>',req.session);
     res.render("pages/frontend/about", { title: "Express", active_nav: "about" });
   },
+ Solutions: (req, res, next) => {
+    // console.log( 'dash=>',req.session);
+    res.render("pages/frontend/solutions", { title: "Express", active_nav: "solutions" });
+  },
   Products: (req, res, next) => {
     Products((err, results) => {
 
