@@ -2,7 +2,6 @@ var express = require("express");
 const homeController = require("../../controller/homeController");
 var router = express.Router();
 
-
 router.get("/fhome",homeController.Image);
 router.get("/Brand",homeController.Brands)
 router.get("/Client",homeController.Clients)

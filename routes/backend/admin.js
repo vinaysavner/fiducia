@@ -5,6 +5,7 @@ const authController = require("../../controller/authController");
 const adminController = require("../../controller/adminController");
 var router = express.Router();
 
+
 router.get("/admin",authController.main)//admin
 router.post("/admin",authController.login);
 router.get('/logout',authController.logout)
