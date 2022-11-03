@@ -221,6 +221,18 @@ jQuery(document).ready(function() {
     
     
     </style>
+    <script type="text/javascript">
+      // Initialize Variables
+      var closePopup = document.getElementById("popupclose");
+      var overlay = document.getElementById("overlay");
+      var popup = document.getElementById("popup");
+   
+      // Close Popup Event
+      closePopup.onclick = function() {
+          overlay.style.display = 'none';
+          popup.style.display = 'none';
+      };
+  </script>
   </head>
   <body>
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
@@ -347,8 +359,8 @@ jQuery(document).ready(function() {
       <div class="service" id="service">
         <div class="container">
             <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                <p  style="  font-family: 'Kanit', sans-serif;">What I do</p>
-                <h2  style=" font-family: 'Kanit', sans-serif;">Awesome Quality Services</h2>
+                <p  style="  font-family: 'Kanit', sans-serif;">Awesome Quality Services</p>
+                <h2  style=" font-family: 'Kanit', sans-serif;">Our Solutions</h2>
             </div>
             <div class="row">
                 <div class="col-md-6 wow fadeInUp" data-wow-delay="0.0s">
@@ -357,10 +369,9 @@ jQuery(document).ready(function() {
                             <i class="fa fa-laptop"></i>
                         </div>
                         <div class="service-text">
-                            <h3  style="text-align:justify;  font-family: 'Kanit', sans-serif;">Our Solution</h3>
-                            <p  style="text-align:justify;  font-family: 'Kanit', sans-serif;">
-                              Security and Network Consultant 
-                            </p>
+                          <a href="/security"><h3  style="text-align:justify;  font-family: 'Kanit', sans-serif;">Security and Network Consultant </h3></a>
+                            
+                           
                         </div>
                     </div>
                 </div>
@@ -370,10 +381,9 @@ jQuery(document).ready(function() {
                             <i class="fa fa-handshake-o"></i>
                         </div>
                         <div class="service-text">
-                            <h3  style="text-align:justify;  font-family: 'Kanit', sans-serif;">Our Solution</h3>
-                            <p  style="text-align:justify;  font-family: 'Kanit', sans-serif;">
-                              Intelligent Entrance Management System
-                            </p>
+                          <a href="/management_system"> <h3  style=" font-family: 'Kanit', sans-serif;">Intelligent Entrance Management System</h3></a>
+                         
+                         
                         </div>
                     </div>
                 </div>
@@ -383,10 +393,11 @@ jQuery(document).ready(function() {
                             <i class="fab fa-building"></i>
                         </div>
                         <div class="service-text">
-                            <h3  style="text-align:justify;  font-family: 'Kanit', sans-serif;">Our Solution</h3>
-                            <p  style="text-align:justify;  font-family: 'Kanit', sans-serif;">
-                              BMS (Building Management)
-                            </p>
+                          <a href="/bms">
+                            <h3  style="text-align:justify;  font-family: 'Kanit', sans-serif;">BMS (Building Management)</h3>
+                          </a>
+                            
+                          
                         </div>
                     </div>
                 </div>
@@ -396,10 +407,11 @@ jQuery(document).ready(function() {
                             <i class="fab fa-low-vision"></i>
                         </div>
                         <div class="service-text">
-                            <h3  style="text-align:justify;  font-family: 'Kanit', sans-serif;">Our Solution</h3>
-                            <p  style="text-align:justify;  font-family: 'Kanit', sans-serif;">
-                              IP Surveillance and security infra 
-                            </p>
+                          <a href="/surveillance">
+                            <h3  style="text-align:justify;  font-family: 'Kanit', sans-serif;">IP Surveillance and security infra </h3>
+                          </a>
+                           
+                            
                         </div>
                     </div>
                 </div>
@@ -409,10 +421,11 @@ jQuery(document).ready(function() {
                           <i class="fa fa-podcast"></i>
                       </div>
                       <div class="service-text">
-                          <h3  style="text-align:justify;  font-family: 'Kanit', sans-serif;">Our Solution</h3>
-                          <p  style="text-align:justify;  font-family: 'Kanit', sans-serif;">
-                            Unified Communication and radio
-                          </p>
+                        <a href="/communication">
+                          <h3  style="text-align:justify;  font-family: 'Kanit', sans-serif;">Unified Communication and radio</h3>
+                        </a>
+                          
+                      
                       </div>
                   </div>
               </div>
@@ -422,10 +435,11 @@ jQuery(document).ready(function() {
                           <i class="fa fa-fire-extinguisher"></i>
                       </div>
                       <div class="service-text">
-                          <h3  style="text-align:justify;  font-family: 'Kanit', sans-serif;">Our Solution</h3>
-                          <p  style="text-align:justify;  font-family: 'Kanit', sans-serif;">
-                            Fire alarm System 
-                          </p>
+                        <a href="/fire_alarm"> <h3  style="text-align:justify;  font-family: 'Kanit', sans-serif;"> Fire alarm System </h3>
+
+                        </a>
+                         
+                         
                       </div>
                   </div>
               </div>
@@ -435,10 +449,11 @@ jQuery(document).ready(function() {
                           <i class="fab fa-user-secret"></i>
                       </div>
                       <div class="service-text">
-                          <h3  style="text-align:justify;  font-family: 'Kanit', sans-serif;">Our Solution</h3>
-                          <p  style="text-align:justify;  font-family: 'Kanit', sans-serif;">
-                            Defense Security 
-                          </p>
+                        <a href="/defence_security">
+                          <h3  style="text-align:justify;  font-family: 'Kanit', sans-serif;">Defense Security </h3>
+                        </a>
+                        
+                        
                       </div>
                   </div>
               </div>
@@ -448,10 +463,11 @@ jQuery(document).ready(function() {
                           <i class="fab fa-superpowers"></i>
                       </div>
                       <div class="service-text">
-                          <h3  style="text-align:justify;  font-family: 'Kanit', sans-serif;">Our Solution</h3>
-                          <p  style="text-align:justify;  font-family: 'Kanit', sans-serif;">
-                            Renewable energy generation system  
-                          </p>
+                        <a href="/renewable">
+                          <h3  style="text-align:justify;  font-family: 'Kanit', sans-serif;">Renewable energy generation system  </h3>
+                        </a>
+                         
+                         
                       </div>
                   </div>
               </div>

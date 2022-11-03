@@ -13,6 +13,7 @@ const date = require('date-and-time')
 const pool = require("./config/database");
 var multer = require('multer');
 const frontendRouter = require("./routes/frontend/home")
+const solutionsRouter = require("./routes/frontend/solutions")
 
 const adminRouter = require("./routes/backend/admin");
 
@@ -69,8 +70,7 @@ var upload = multer({
 });
 
 
-
-
+app.use("/",solutionsRouter)
 app.use("/",frontendRouter)//home page
 app.use("/",adminRouter)// admin 
 app.listen(5000, () => {
