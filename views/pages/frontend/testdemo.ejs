@@ -10,9 +10,12 @@
     <link rel="stylesheet" type="text/css"  href="/plugins/bootstrap.css">
     <link rel="stylesheet" type="text/css"  href="/plugins/fonts.css">
     <link rel="stylesheet"  type="text/css"  href="/css/style.css">
-  <link rel="stylesheet" href="/css/testimonials.css">
-   <link rel="stylesheet" href="/css/theme.css">
-<link rel="stylesheet" href="/css/style.min.css">
+    <link rel="stylesheet" href="/css/testimonials.css">
+    <link rel="stylesheet" href="/css/theme.css">
+    <link rel="stylesheet" href="/css/style.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"> 
      <link href="/css/lib/animate/animate.min.css" rel="stylesheet">
@@ -21,9 +24,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital@1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/plugins/bootstrap.css">
- <link rel="stylesheet" href="/css/dev.css"> 
- <style>
+    <link rel="stylesheet" href="/css/dev.css"> 
+         <script src="/js/testimonials.js"></script>
+<script>
+jQuery(document).ready(function() {
+        
+	jQuery('.carousel[data-type="multi"] .item').each(function(){
+		var next = jQuery(this).next();
+		if (!next.length) {
+			next = jQuery(this).siblings(':first');
+		}
+		next.children(':first-child').clone().appendTo(jQuery(this));
+	  
+		for (var i=0;i<2;i++) {
+			next=next.next();
+			if (!next.length) {
+				next = jQuery(this).siblings(':first');
+			}
+			next.children(':first-child').clone().appendTo($(this));
+		}
+	});
+        
+});
+</script>
+<style>
   .bg-primary {
     background-color: #0d2e51!important;
 }
@@ -293,8 +317,6 @@ jQuery(document).ready(function() {
           <% } %>
         
         </div>
-
-    
         <!--Swiper Pagination-->
         <div class="swiper-pagination-wrap">
           <div class="container">
@@ -306,7 +328,8 @@ jQuery(document).ready(function() {
           </div>
         </div>
       </section>
-   
+
+    
       <!--Icon List 2-->
       <section class="section section-sm section-sm-bottom-100 bg-primary">
         <div class="container">
@@ -314,36 +337,49 @@ jQuery(document).ready(function() {
             <div class="col-md-4 wow fadeInUp">
               <div class="box-icon-2">
                 <div class="icon novi-icon"></div>
-                <h3 class="title">About Us</h3>
-                <p class="text" style="text-align:justify;  font-family: 'Kanit', sans-serif;">Fiducia technologies is one of the most trusted integrator and solutions provider of 
+                <h5 class="title">About Us</h5>
+                <p class="text" style="text-align:justify;">Fiducia technologies is one of the most trusted integrator and solutions provider of 
                     advanced safety & security solutions and network communication systems.</p>
-                    <a style=" font-family: 'Kanit', sans-serif;" class="text" href="/About">Read more</a>
+                    <a class="text" href="/about">Read more</a>
               </div>
             </div>
             <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
               <div class="box-icon-2">
                 <div class="icon novi-icon "></div>
-                <h3 class="title"  style="text-align:justify;  font-family: 'Kanit', sans-serif;">Our Services</h3>
-                <p class="text" style="text-align:justify; font-family: 'Kanit', sans-serif;">Building facilities face challenges in fulling security, comfort, and management 
+                <h5 class="title">Our Services</h5>
+                <p class="text" style="text-align:justify;">Building facilities face challenges in fulling security, comfort, and management 
                     efficiency demand. These challenges include People Management, Vehicle Management, 
                     Emergency Management, Canteen Management, and Center Management</p>
-                    <a style=" font-family: 'Kanit', sans-serif;" class="text" href="/Product">Read more</a>
+                    <a class="text" href="/fproduct">Read more</a>
               </div>
             </div>
             <div class="col-md-4 wow fadeInUp" data-wow-delay="0.4s">
               <div class="box-icon-2">
                 <div class="icon novi-icon "></div>
-                <h3 style=" font-family: 'Kanit', sans-serif;" class="title">Contact Us</h3>
-                <p style=" font-family: 'Kanit', sans-serif;" class="text" style="text-align:justify;">Reach out to us for further development communication.</p>
-                <a style=" font-family: 'Kanit', sans-serif;" class="text" href="/Contact">Read more</a>
+                <h5 class="title">Contact Us</h5>
+                <p class="text" style="text-align:justify;">Reach out to us for further development communication.</p>
+                <a class="text" href="/fcontact">Read more</a>
               </div>
             </div>
           </div>
         </div>
       </section>
-
-
-
+      <!-- Download Our Tax Guide App-->
+      <!-- <section class="section bg-gray-100 box-image-left">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 wow fadeInLeft">
+              <div class="section-lg section-lg-top-100">
+                <h2 class="title-icon title-icon-2"><span class="icon icon-default mercury-icon-touch"></span><span>Download Our <br><span class="text-light">Tax Guide App</span></span></h2>
+                <p class="big">We are glad to introduce our brand new Tax Guide App, a perfect solution for individual tax management our clients have been waiting for. It is available now for all iOS and Android device owners.</p>
+                <div class="group-sm group-wrap-2"><a class="button button-primary" href="#">Get iOS app</a><a class="button button-icon button-icon-right button-secondary" href="#"><span>Get Android app</span><span class="icon fa fa-android"></span></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box-image-item box-image-video novi-background bg-image" style="background-image: url(images/index-874x534.jpg)"><a class="icon novi-icon fa fa-caret-right" href="//www.youtube.com/embed/KFVUxSynSXc" data-lightgallery="item"></a></div>
+      </section> -->
+      <!-- Our Mission-->
       <div class="service" id="service">
         <div class="container">
             <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
@@ -407,18 +443,12 @@ jQuery(document).ready(function() {
             </div>
         </div>
     </div>
-
-
-
-
-
-
       <section class="section bg-default section-md">
         <div class="container">
           <div class="row row-30">
             <div class="col-md-6">
               <h2 class="title-icon"><span class="icon icon-default mercury-icon-target-2"></span><span>Our <span class="text-light">Mission</span></span></h2>
-              <p class="big" style="text-align:justify;  font-family: 'Kanit', sans-serif;" >We believe in empowering business 
+              <p class="big" style="text-align:justify;">We believe in empowering business 
                 success through economical and 
                 advanced IT solutions. With strong 
                 technology delivering capabilities, we are 
@@ -429,7 +459,7 @@ jQuery(document).ready(function() {
                 building or implementing high quality 
                 scalable business solutions through the 
                 use of latest cutting-edge Technologies</p>
-              <ul class="list-marked-2" style="text-align:justify; font-family: 'Kanit', sans-serif;">
+              <ul class="list-marked-2" style="text-align:justify;">
                 <li>Providing the highest 
                     quality product</li>
                 <li>Quality will always be our primary 
@@ -437,66 +467,58 @@ jQuery(document).ready(function() {
                 <li>Offering full support to all our clients</li>
               </ul><a class="button button-primary" href="#">Read more</a>
             </div>
-            <% for(var i=0; i < data.length; i++ ) { %>
             <div class="col-md-6">
               <div class="row">
                 <div class="col-6">
                   <!--Box counter-->
                   <div class="box-counter">
                     <div class="box-counter-main">
-                      <div class="counter"><%= data[i].clients%></div>
+                      <div class="counter"><%= data[0].clients%></div>
                     </div>
-                    <p class="box-counter-title" style="font-family: 'Kanit', sans-serif;">Clients Satisfactions</p>
+                    <p class="box-counter-title">Clients Satisfactions</p>
                   </div>
                 </div>
                 <div class="col-6">
                   <!--Box counter-->
                   <div class="box-counter">
                     <div class="box-counter-main">
-                      <div class="counter"><%= data[i].members%></div>
+                      <div class="counter"><%= data[0].members%></div>
                     </div>
-                    <p class="box-counter-title"  style="font-family: 'Kanit', sans-serif;">Team Members</p>
+                    <p class="box-counter-title">Team Members</p>
                   </div>
                 </div>
                 <div class="col-6">
                   <!--Box counter-->
                   <div class="box-counter">
                     <div class="box-counter-main">
-                      <div class="counter"><%= data[i].experience%></div>
+                      <div class="counter"><%= data[0].experience%></div>
                     </div>
-                    <p class="box-counter-title"  style="font-family: 'Kanit', sans-serif;">Years Of Experience</p>
+                    <p class="box-counter-title">Years Of Experience</p>
                   </div>
                 </div>
                 <div class="col-6">
                   <!--Box counter-->
                   <div class="box-counter">
                     <div class="box-counter-main">
-                      <div class="counter"><%= data[i].projects%></div><span></span>
+                      <div class="counter"><%= data[0].projects%></div><span></span>
                     </div>
-                    <p class="box-counter-title"  style="font-family: 'Kanit', sans-serif;">Running projects</p>
+                    <p class="box-counter-title">Running projects</p>
                   </div>
                 </div>
               </div>
             </div>
-            <% } %>
           </div>
         </div>
       </section>
-
-
-     
-
-
-      
   
-     <!-- client slider  -->
+     <!-- client slider -->
      <section class="section section-sm section-sm-bottom-100 bg-primary">
       <div class="container">
         <div class="row row-30">
     
 <div class="container">
   <div class="text-light">
-    <h2  style="font-family: 'Kanit', sans-serif;">Clients</h2>
+    <h2>Clients</h2>
   </div>
   
 
@@ -524,8 +546,6 @@ jQuery(document).ready(function() {
   </div>
       </div>
     </section>
-  
-
     <div class="experience" id="experience">
       <div class="container">
           <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
@@ -610,7 +630,6 @@ in more than a decade
           </div>
       </div>
   </div>
-  
 
 
   
@@ -662,6 +681,7 @@ in more than a decade
           </div>
       </div>
   </div>
+      <!-- Latest Articles-->
     
       <section class="section bg-default section-md">
         <div class="container">
@@ -669,30 +689,26 @@ in more than a decade
           <% for(var i=0; i < data.length; i++ ) { %>
          
           <div class="box-image-small box-image-small-left">
-            <div class="item-image bg-image novi-nackground" style="background-image: url('/images/upload_article_images/<%= articles[0].image %>')"></div>
+            <div class="item-image bg-image novi-nackground" style="background-image: url('/images/upload_article_images/<%= articles[i].image %>')"></div>
             <div class="item-body wow fadeInRight">
               <p>July 12, 2019</p>
-              <h4  style="font-family: 'Kanit', sans-serif;"><a href="#"><%= articles[0].title%></a></h4>
-              <p  style="font-family: 'Kanit', sans-serif;" class="big"><%= articles[0].description%></p>
+              <h4><a href="#"><%- articles[i].title%></a></h4>
+              <p class="big"><%- articles[i].description%></p>
             </div>
           </div>
-          <div class="box-image-small box-image-small-right">
+          <!-- <div class="box-image-small box-image-small-right">
             <div class="item-image bg-image novi-nackground" style="background-image: url('/images/upload_article_images/<%= articles[1].image %>')"></div>
             <div class="item-body wow fadeInLeft">
               <p>July 12, 2019</p>
-              <h4  style="font-family: 'Kanit', sans-serif;"><a href="#"><%= articles[1].title%></a></h4>
-              <p   style="font-family: 'Kanit', sans-serif;"class="big"><%= articles[1].description%></p>
+              <h4><a href="#"><%- articles[1].title%></a></h4>
+              <p class="big"><%- articles[1].description%></p>
             </div>
-          </div>
+          </div> -->
           <% } %>
 
         </div>
       </section>
- 
-  
-      
-
-
+   
       <footer class="section footer-classic">
         <div class="footer-inner-1">
           <div class="container">
@@ -748,13 +764,13 @@ in more than a decade
                 <div class="social-icons" style="margin-left: -34px;
                 margin-right: -15px; width:max-content;     font-size: xxx-large;
 ">
-                  <a href="https://www.facebook.com/profile.php?id=100085259112179"   title="facebook"> 
-                    <i class="fa fa-facebook-square" aria-hidden="true" ></i>
+                  <a href="https://www.facebook.com/profile.php?id=100085259112179" title="facebook"> 
+                    <i class="fa fa-facebook-square" aria-hidden="true"></i>
                   </a>
-                  <a href="https://twitter.com/FiduciaTech"  title="twitter"> 
+                  <a href="https://twitter.com/FiduciaTech" title="twitter"> 
                     <i class="fa fa-twitter-square" aria-hidden="true"></i>
                   </a>
-                  <a href="https://www.instagram.com/fiduciatechnologiesllp/"   title="instagram">  
+                  <a href="https://www.instagram.com/fiduciatechnologiesllp/" title="instagram">  
                     <i class="fa fa-instagram" aria-hidden="true"></i>
                   </a>
                 </div>
@@ -774,33 +790,23 @@ in more than a decade
       </footer>
  
 
-    <!-- <script>
-    $(document).ready(function () {
-      
-      $(".rd-nav-link ").click(function (){
-        $(this).addClass("active").siblings().removeClass("active");
+      <script>
+        $(".testimonials-carousel").owlCarousel({
+          center: true,
+          autoplay: true,
+          dots: true,
+          loop: true,
+          responsive: {
+              0:{
+                  items:1
+              }
+          }
       });
-    });
-    </script> -->
+      
+  </script>
     <script src="/js/core.min.js"></script>
     <script src="/js/script.js"></script>
-   
-<script>
-      $(".testimonials-carousel").owlCarousel({
-        center: true,
-        autoplay: true,
-        dots: true,
-        loop: true,
-        responsive: {
-            0:{
-                items:1
-            }
-        }
-    });
-    
-</script>
-  
     <!--coded by Starlight-->
-    <a href="//web.whatsapp.com/send?phone=9977776189&text&app_absent=0" style="background-color: #041d55; font-size: xx-large;" id ="ui-to-top" class="ui-to-top fas fa-whatsapp active"></a>
+    <a href="//web.whatsapp.com/send?phone=9977776189&amp;text&amp;app_absent=0" style="background-color: #041d55; font-size: xx-large;" id="ui-to-top" class="ui-to-top fas fa-whatsapp active"></a>
   </body>
 </html>
